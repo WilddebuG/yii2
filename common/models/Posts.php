@@ -58,4 +58,14 @@ class Posts extends ActiveRecord
     {
         return $this->hasOne(Customers::className(), ['customer_id' => 'customer_id']);
     }
+
+    public function fields()
+    {
+        return [
+            'Id' => 'posts_id',
+            'Title' => 'post_title',
+            'Desc' => 'post_description',
+            'User_Id' => 'customer_id',
+        ];
+    }
 }

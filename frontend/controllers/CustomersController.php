@@ -20,7 +20,7 @@ class CustomersController extends Controller
         $model = new Customers;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            Yii::$app->session->setFlash('success', 'Yep, all is cool');
+            Yii::$app->session->setFlash('success', 'Yep, all is dcool');
         }
         return $this->render('index', ['model' => $model]);
     }
@@ -37,7 +37,6 @@ class CustomersController extends Controller
             print_r($model->getErrors());
         else
             Yii::$app->getSession()->setFlash('success', 'Your message has been successfully recorded.');
-
         return $this->render('index', [
             'model' => $model
         ]);

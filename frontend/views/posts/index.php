@@ -8,7 +8,6 @@
 
 $this->title = 'Posts';
 $this->params['breadcrumbs'][] = $this->title;
-
 ?>
 
     <div class="new">
